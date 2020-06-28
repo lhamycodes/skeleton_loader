@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  # for shimmer effect
+  shimmer: ^1.1.1
 
 dev_dependencies:
   flutter_test:
