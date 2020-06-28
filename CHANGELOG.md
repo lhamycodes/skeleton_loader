@@ -1,3 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+## [1.0.0] - 28th June, 2020.
 
-* TODO: Describe initial release.
+Initial release.
+Features:
+- Fully Customizable loader skeleton with everything customizable

@@ -18,7 +18,7 @@ class SkeletonLoader extends StatefulWidget {
 
   /// Highlight Color of the skeleton list item
   /// Defaults to ShimmerDirection.rtl
-  final ShimmerDirection direction;
+  final SkeletonDirection direction;
 
   /// Duration in which the transition takes place
   /// Defaults to Duration(seconds: 2)
@@ -30,7 +30,7 @@ class SkeletonLoader extends StatefulWidget {
     @required this.builder,
     this.baseColor = const Color(0xFFE0E0E0),
     this.hightlightColor = const Color(0xFFF5F5F5),
-    this.direction = ShimmerDirection.ltr,
+    this.direction = SkeletonDirection.ltr,
     this.period = const Duration(seconds: 2),
   }) : super(key: key);
 
@@ -41,12 +41,29 @@ class SkeletonLoader extends StatefulWidget {
 class _SkeletonLoaderState extends State<SkeletonLoader> {
   @override
   Widget build(BuildContext context) {
+    ShimmerDirection direction;
+    switch (widget.direction) {
+      case SkeletonDirection.ltr:
+        direction = ShimmerDirection.ltr;
+        break;
+      case SkeletonDirection.rtl:
+        direction = ShimmerDirection.rtl;
+        break;
+      case SkeletonDirection.btt:
+        direction = ShimmerDirection.btt;
+        break;
+      case SkeletonDirection.ttb:
+        direction = ShimmerDirection.ttb;
+        break;
+      default:
+    }
+
     return Column(
       children: [
         Shimmer.fromColors(
           baseColor: widget.baseColor,
           highlightColor: widget.hightlightColor,
-          direction: widget.direction,
+          direction: direction,
           period: widget.period,
           child: ListView.builder(
             shrinkWrap: true,

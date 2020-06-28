@@ -125,6 +125,7 @@ class _HomeState extends State<Home> {
         items: 10,
         period: Duration(seconds: 2),
         hightlightColor: Colors.lightBlue[300],
+        direction: SkeletonDirection.ltr,
       );
     } else {
       return ListView.builder(
