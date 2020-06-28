@@ -6,7 +6,7 @@ class SkeletonLoader extends StatefulWidget {
   final int items;
 
   /// A layout of how you want your skeleton to look like
-  final Widget loaderShell;
+  final Widget builder;
 
   /// Base Color of the skeleton list item
   /// Defaults to Colors.grey[300]
@@ -20,13 +20,18 @@ class SkeletonLoader extends StatefulWidget {
   /// Defaults to ShimmerDirection.rtl
   final ShimmerDirection direction;
 
+  /// Duration in which the transition takes place
+  /// Defaults to Duration(seconds: 2)
+  final Duration period;
+
   const SkeletonLoader({
     Key key,
     this.items = 1,
-    @required this.loaderShell,
+    @required this.builder,
     this.baseColor = const Color(0xFFE0E0E0),
     this.hightlightColor = const Color(0xFFF5F5F5),
-    this.direction = ShimmerDirection.rtl,
+    this.direction = ShimmerDirection.ltr,
+    this.period = const Duration(seconds: 2),
   }) : super(key: key);
 
   @override
@@ -36,15 +41,23 @@ class SkeletonLoader extends StatefulWidget {
 class _SkeletonLoaderState extends State<SkeletonLoader> {
   @override
   Widget build(BuildContext context) {
-    return Shimmer.fromColors(
-      baseColor: widget.baseColor,
-      highlightColor: widget.hightlightColor,
-      direction: widget.direction,
-      child: ListView.builder(
-        physics: NeverScrollableScrollPhysics(),
-        itemBuilder: (_, __) => widget.loaderShell,
-        itemCount: widget.items,
-      ),
+    return Column(
+      children: [
+        Shimmer.fromColors(
+          baseColor: widget.baseColor,
+          highlightColor: widget.hightlightColor,
+          direction: widget.direction,
+          period: widget.period,
+          child: ListView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (_, __) => Container(
+              child: widget.builder,
+            ),
+            itemCount: widget.items,
+          ),
+        ),
+      ],
     );
   }
 }
