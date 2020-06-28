@@ -9,7 +9,6 @@ How to install it? [Follow Instructions](https://pub.dev/packages/skeleton_loade
 ## Preview
 
 <p>
-    <img src="https://github.com/lhamycodes/skeleton_loader/blob/master/screenshots/screen.gif" width="200px" height="auto" hspace="20"/>
     <img src="https://raw.githubusercontent.com/lhamycodes/skeleton_loader/master/screenshots/screen.gif" width="200px" height="auto" hspace="20"/>
 </p>
 
