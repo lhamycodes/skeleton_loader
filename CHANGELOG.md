@@ -2,4 +2,5 @@
 
 Initial release.
 Features:
-- Fully Customizable loader skeleton with everything customizable
+- Flutter skeleton loader with everything customizable, from the colors to the layout
+- Improve Performance & Optimized
