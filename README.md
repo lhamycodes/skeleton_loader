@@ -161,7 +161,7 @@ class _HomeState extends State<Home> {
 
 ## Screenshots
 <p>
-    <video src="https://raw.githubusercontent.com/lhamycodes/skeleton_loader/master/screenshots/video.mp4" width="200px" height="auto" hspace="20">
+    <img src="https://raw.githubusercontent.com/lhamycodes/skeleton_loader/master/screenshots/screen.gif" width="200px" height="auto" hspace="20"/>
 </p>
 
 ## Contributing
