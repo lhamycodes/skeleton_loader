@@ -4,10 +4,10 @@ A Flutter Package which provides a fully customizable loading skeleton for your 
 
 ## Installation
 
-How to install it? [Follow Instructions](
-https://pub.dev/packages/skeleton_loader#-installing-tab-)
+How to install it? [Follow Instructions](https://pub.dev/packages/skeleton_loader#-installing-tab-)
 
 ## Usage
+
 ```dart
 import 'package:flutter/material.dart';
 import 'package:skeleton_loader/skeleton_loader.dart';
@@ -160,14 +160,18 @@ class _HomeState extends State<Home> {
 ```
 
 ## Screenshots
+
 <p>
     <img src="https://raw.githubusercontent.com/lhamycodes/skeleton_loader/master/screenshots/screen.gif" width="200px" height="auto" hspace="20"/>
+    <img src="https://github.com/lhamycodes/skeloton_loader/blob/master/screenshots/screen.gif" width="200px" height="auto" hspace="20"/>
 </p>
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
