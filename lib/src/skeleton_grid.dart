@@ -1,12 +1,15 @@
 part of skeleton_loader;
 
-class SkeletonLoader extends StatefulWidget {
+class SkeletonGridLoader extends StatefulWidget {
   /// Number of skeleton items to show
-  /// Default is 1
   final int items;
 
   /// A layout of how you want your skeleton to look like
   final Widget builder;
+
+  /// Number of skeleton items to show
+  /// Default is 2
+  final int itemsPerRow;
 
   /// Base Color of the skeleton list item
   /// Defaults to Colors.grey[300]
@@ -24,10 +27,11 @@ class SkeletonLoader extends StatefulWidget {
   /// Defaults to Duration(seconds: 2)
   final Duration period;
 
-  const SkeletonLoader({
+  const SkeletonGridLoader({
     Key key,
-    this.items = 1,
+    @required this.items,
     @required this.builder,
+    this.itemsPerRow = 2,
     this.baseColor = const Color(0xFFE0E0E0),
     this.hightlightColor = const Color(0xFFF5F5F5),
     this.direction = SkeletonDirection.ltr,
@@ -35,28 +39,13 @@ class SkeletonLoader extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SkeletonLoaderState createState() => _SkeletonLoaderState();
+  _SkeletonGridLoaderState createState() => _SkeletonGridLoaderState();
 }
 
-class _SkeletonLoaderState extends State<SkeletonLoader> {
+class _SkeletonGridLoaderState extends State<SkeletonGridLoader> {
   @override
   Widget build(BuildContext context) {
-    ShimmerDirection direction;
-    switch (widget.direction) {
-      case SkeletonDirection.ltr:
-        direction = ShimmerDirection.ltr;
-        break;
-      case SkeletonDirection.rtl:
-        direction = ShimmerDirection.rtl;
-        break;
-      case SkeletonDirection.btt:
-        direction = ShimmerDirection.btt;
-        break;
-      case SkeletonDirection.ttb:
-        direction = ShimmerDirection.ttb;
-        break;
-      default:
-    }
+    ShimmerDirection direction = getDirection(widget.direction);
 
     return Column(
       children: [
@@ -65,13 +54,16 @@ class _SkeletonLoaderState extends State<SkeletonLoader> {
           highlightColor: widget.hightlightColor,
           direction: direction,
           period: widget.period,
-          child: ListView.builder(
+          child: GridView.builder(
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (_, __) => Container(
               child: widget.builder,
             ),
             itemCount: widget.items,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: widget.itemsPerRow,
+            ),
           ),
         ),
       ],

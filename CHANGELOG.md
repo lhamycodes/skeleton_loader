@@ -7,3 +7,9 @@ Features:
 ## [1.0.1] - 26th June, 2020.
 - Update Readme File
 - Improve Performance & Optimized
+
+## [1.0.2] - 26th June, 2020.
+- Add SkeletonGridLoader
+- Update Example app
+- Update Readme File
+- Improve Performance & Optimized
