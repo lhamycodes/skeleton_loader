@@ -27,6 +27,14 @@ class SkeletonGridLoader extends StatefulWidget {
   /// Defaults to Duration(seconds: 2)
   final Duration period;
 
+  /// Spacing between items on the cross axis
+  /// Defaults to 10
+  final double crossAxisSpacing;
+
+  /// Spacing between items on the main axis
+  /// Defaults to 10
+  final double mainAxisSpacing;
+
   const SkeletonGridLoader({
     Key key,
     @required this.items,
@@ -36,6 +44,8 @@ class SkeletonGridLoader extends StatefulWidget {
     this.hightlightColor = const Color(0xFFF5F5F5),
     this.direction = SkeletonDirection.ltr,
     this.period = const Duration(seconds: 2),
+    this.crossAxisSpacing = 10,
+    this.mainAxisSpacing = 10,
   }) : super(key: key);
 
   @override
@@ -63,6 +73,8 @@ class _SkeletonGridLoaderState extends State<SkeletonGridLoader> {
             itemCount: widget.items,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: widget.itemsPerRow,
+              crossAxisSpacing: widget.crossAxisSpacing,
+              mainAxisSpacing: widget.mainAxisSpacing,
             ),
           ),
         ),
