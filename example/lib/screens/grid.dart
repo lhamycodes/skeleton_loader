@@ -73,7 +73,7 @@ class _GridExampleState extends State<GridExample> {
         items: 9,
         itemsPerRow: 3,
         period: Duration(seconds: 2),
-        hightlightColor: Colors.lightBlue[300],
+        highlightColor: Colors.lightBlue[300],
         direction: SkeletonDirection.ltr,
       );
     } else {

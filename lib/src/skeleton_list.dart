@@ -14,7 +14,7 @@ class SkeletonLoader extends StatefulWidget {
 
   /// Highlight Color of the skeleton list item
   /// Defaults to Colors.grey[100]
-  final Color hightlightColor;
+  final Color highlightColor;
 
   /// Highlight Color of the skeleton list item
   /// Defaults to ShimmerDirection.rtl
@@ -29,7 +29,7 @@ class SkeletonLoader extends StatefulWidget {
     this.items = 1,
     @required this.builder,
     this.baseColor = const Color(0xFFE0E0E0),
-    this.hightlightColor = const Color(0xFFF5F5F5),
+    this.highlightColor = const Color(0xFFF5F5F5),
     this.direction = SkeletonDirection.ltr,
     this.period = const Duration(seconds: 2),
   }) : super(key: key);
@@ -47,7 +47,7 @@ class _SkeletonLoaderState extends State<SkeletonLoader> {
       children: [
         Shimmer.fromColors(
           baseColor: widget.baseColor,
-          highlightColor: widget.hightlightColor,
+          highlightColor: widget.highlightColor,
           direction: direction,
           period: widget.period,
           child: ListView.builder(

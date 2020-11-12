@@ -79,7 +79,7 @@ class _ListExampleState extends State<ListExample> {
         ),
         items: 10,
         period: Duration(seconds: 2),
-        hightlightColor: Colors.lightBlue[300],
+        highlightColor: Colors.lightBlue[300],
         direction: SkeletonDirection.ltr,
       );
     } else {
