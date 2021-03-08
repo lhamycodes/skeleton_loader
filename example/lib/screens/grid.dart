@@ -75,6 +75,7 @@ class _GridExampleState extends State<GridExample> {
         period: Duration(seconds: 2),
         highlightColor: Colors.lightBlue[300],
         direction: SkeletonDirection.ltr,
+        childAspectRatio: 1,
       );
     } else {
       return GridView.builder(

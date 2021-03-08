@@ -35,6 +35,10 @@ class SkeletonGridLoader extends StatefulWidget {
   /// Defaults to 10
   final double mainAxisSpacing;
 
+  /// Aspect ratio of each grid item
+  /// Defaults to 1.0
+  final double childAspectRatio;
+
   const SkeletonGridLoader({
     Key key,
     @required this.items,
@@ -46,6 +50,7 @@ class SkeletonGridLoader extends StatefulWidget {
     this.period = const Duration(seconds: 2),
     this.crossAxisSpacing = 10,
     this.mainAxisSpacing = 10,
+    this.childAspectRatio = 1.0,
   }) : super(key: key);
 
   @override
@@ -75,6 +80,7 @@ class _SkeletonGridLoaderState extends State<SkeletonGridLoader> {
               crossAxisCount: widget.itemsPerRow,
               crossAxisSpacing: widget.crossAxisSpacing,
               mainAxisSpacing: widget.mainAxisSpacing,
+              childAspectRatio: widget.childAspectRatio,
             ),
           ),
         ),
