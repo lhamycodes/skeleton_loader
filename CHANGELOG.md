@@ -25,6 +25,6 @@ Features:
 
 - Fix typo issue (Changed property hightlightColor to highlightColor)
 
-## [1.0.2+2] - 8th March, 2021.
+## [1.0.2+3] - 8th March, 2021.
 
 - Add Support for `childAspectRatio` on SkeletonGridLoader
