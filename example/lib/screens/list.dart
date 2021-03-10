@@ -6,8 +6,8 @@ class ListExample extends StatefulWidget {
   final List<StateCapital> stateCapitals;
 
   const ListExample({
-    Key key,
-    @required this.stateCapitals,
+    Key? key,
+    required this.stateCapitals,
   }) : super(key: key);
 
   @override
@@ -79,7 +79,7 @@ class _ListExampleState extends State<ListExample> {
         ),
         items: 10,
         period: Duration(seconds: 2),
-        highlightColor: Colors.lightBlue[300],
+        highlightColor: Colors.lightBlue[300]!,
         direction: SkeletonDirection.ltr,
       );
     } else {
@@ -90,8 +90,8 @@ class _ListExampleState extends State<ListExample> {
             leading: CircleAvatar(
               child: Text("${i + 1}"),
             ),
-            title: Text(sc.name),
-            subtitle: Text(sc.capital),
+            title: Text(sc.name!),
+            subtitle: Text(sc.capital!),
           );
         },
         itemCount: _myItemsList.length,

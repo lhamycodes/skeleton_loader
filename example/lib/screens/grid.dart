@@ -6,8 +6,8 @@ class GridExample extends StatefulWidget {
   final List<StateCapital> stateCapitals;
 
   const GridExample({
-    Key key,
-    @required this.stateCapitals,
+    Key? key,
+    required this.stateCapitals,
   }) : super(key: key);
 
   @override
@@ -73,7 +73,7 @@ class _GridExampleState extends State<GridExample> {
         items: 9,
         itemsPerRow: 3,
         period: Duration(seconds: 2),
-        highlightColor: Colors.lightBlue[300],
+        highlightColor: Colors.lightBlue[300]!,
         direction: SkeletonDirection.ltr,
         childAspectRatio: 1,
       );
@@ -86,8 +86,8 @@ class _GridExampleState extends State<GridExample> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(sc.name),
-                  Text(sc.capital),
+                  Text(sc.name!),
+                  Text(sc.capital!),
                 ],
               ),
             ),
