@@ -25,9 +25,9 @@ class SkeletonLoader extends StatefulWidget {
   final Duration period;
 
   const SkeletonLoader({
-    Key key,
+    Key? key,
     this.items = 1,
-    @required this.builder,
+    required this.builder,
     this.baseColor = const Color(0xFFE0E0E0),
     this.highlightColor = const Color(0xFFF5F5F5),
     this.direction = SkeletonDirection.ltr,

@@ -4,14 +4,14 @@ version: 1.0.2+3
 homepage: https://github.com/lhamycodes/skeleton_loader
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
   # for shimmer effect
-  shimmer: ^1.1.1
+  shimmer: ^2.0.0-nullsafety.0
 
 dev_dependencies:
   flutter_test:
