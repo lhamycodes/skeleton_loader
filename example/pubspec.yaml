@@ -28,7 +28,7 @@ dependencies:
   skeleton_loader:
     path: ../
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.3
 
   # for google fonts
   google_fonts: ^2.0.0
