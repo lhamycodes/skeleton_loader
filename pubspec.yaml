@@ -1,17 +1,17 @@
 name: skeleton_loader
 description: A Flutter Package which provides a fully customizable loading skeleton for your app,
-version: 1.0.2+3
+version: 2.0.0+4
 homepage: https://github.com/lhamycodes/skeleton_loader
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
   # for shimmer effect
-  shimmer: ^1.1.1
+  shimmer: ^2.0.0
 
 dev_dependencies:
   flutter_test:

@@ -28,3 +28,7 @@ Features:
 ## [1.0.2+3] - 8th March, 2021.
 
 - Add Support for `childAspectRatio` on SkeletonGridLoader
+
+## [2.0.0+4] - 6th July, 2021.
+
+- Migrate Package to support null-safety
